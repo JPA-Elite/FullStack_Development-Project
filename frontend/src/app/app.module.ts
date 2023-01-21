@@ -8,13 +8,15 @@ import { ArticlesComponent } from './articles/articles.component';
 import { NewArticleComponent } from './new-article/new-article.component';
 import { EditArticleComponent } from './edit-article/edit-article.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticlesComponent,
     NewArticleComponent,
-    EditArticleComponent
+    EditArticleComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

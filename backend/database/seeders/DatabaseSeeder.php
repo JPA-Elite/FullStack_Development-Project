@@ -24,10 +24,10 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        OwnerAccount::factory(20)->create();
-        CustomerAccount::factory(20)->create();
-        Place::factory(20)->create();
-        Book::factory(20)->create();
+        OwnerAccount::factory(50)->create();
+        CustomerAccount::factory(50)->create();
+        Place::factory(50)->create();
+        Book::factory(50)->create();
 
 
 
