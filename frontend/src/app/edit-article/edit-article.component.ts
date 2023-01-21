@@ -18,6 +18,7 @@ export class EditArticleComponent implements OnInit {
     this.customerId = Number(routeParams.get('customerId'));
     this.articleService.find(this.customerId).subscribe((data:any) => {
       this.customer = data;
+      
       console.log(this.customer);
     });
 
