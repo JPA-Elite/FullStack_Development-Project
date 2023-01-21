@@ -40,7 +40,7 @@ class OwnerAccountController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:customer_accounts,email',
             'address' => 'required',
-            'password' => 'required|confirmed'
+            'password' => 'required'
         ]);
         return OwnerAccount::create([
             'name'=> $validated['name'],

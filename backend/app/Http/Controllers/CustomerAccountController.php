@@ -40,7 +40,7 @@ class CustomerAccountController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'address' => 'required',
-            'password' => 'required|confirmed'
+            'password' => 'required'
         ]);
         return CustomerAccount::create([
             'name'=> $validated['name'],
