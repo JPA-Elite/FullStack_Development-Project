@@ -22,6 +22,18 @@ export class ArticleService {
     return this.http.post<any>(this.url+ `/api/customer`,customer, this.httpOptions);
 
   }
+
+  find(id:number): Observable<any>{
+    return this.http.get<any>(this.url+ `/api/customer/`+id);
+  }
+
+  update(id : number, customer:any): Observable<any>{
+    return this.http.put<any>(this.url+ `/api/customer/`+ id, customer, this.httpOptions);
+  }
+
+  deleteCustomer(id : any): Observable<any>{
+    return this.http.delete<any>(this.url+ `/api/customer/`+ id, this.httpOptions);
+  }
 }
 
 

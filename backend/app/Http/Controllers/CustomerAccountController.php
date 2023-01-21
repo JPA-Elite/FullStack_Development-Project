@@ -82,14 +82,14 @@ class CustomerAccountController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $validated = $request->validate([
-            'name' => 'unique:customer_accounts',
-            'email' => 'email|unique:customer_accounts,email',
+        // $validated = $request->validate([
+        //     'name' => 'unique:customer_accounts',
+        //     'email' => 'email|unique:customer_accounts,email',
 
-        ]);
+        // ]);
         return CustomerAccount::find($id)->update([
-            'name'=> $validated['name'],
-            'email'=> $validated['email'],
+            'name'=> $request->name,
+            'email'=> $request->email,
             'address'=> $request->address,
             'password'=>Hash::make($request->password)
 

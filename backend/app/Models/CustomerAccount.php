@@ -19,7 +19,6 @@ class CustomerAccount extends Model
         'place_id'
     ];
     protected $hidden = [
-        'password',
         'remember_token',
     ];
 

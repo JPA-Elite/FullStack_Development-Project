@@ -6,17 +6,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { NewArticleComponent } from './new-article/new-article.component';
+import { EditArticleComponent } from './edit-article/edit-article.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticlesComponent,
-    NewArticleComponent
+    NewArticleComponent,
+    EditArticleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
