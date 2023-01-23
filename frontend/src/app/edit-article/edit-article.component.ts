@@ -26,7 +26,7 @@ export class EditArticleComponent implements OnInit {
 
   update(costumerName:string, costumerEmail:string, costumerAddress:string, costumerPassword:string){
     this.articleService.update(this.customerId, this.customer).subscribe((res) => {
-      this.router.navigateByUrl('/').then(() => {
+      this.router.navigateByUrl('/transactions').then(() => {
         window.location.reload();
       });
 

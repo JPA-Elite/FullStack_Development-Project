@@ -25,7 +25,7 @@ export class ArticlesComponent implements OnInit {
       this.customers = this.customers.filter((a: any) => a.id != id);
        });
 
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/transactions');
 
   }
 

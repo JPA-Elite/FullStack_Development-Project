@@ -1,0 +1,19 @@
+.maincontainer{
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:30px;
+    color:#ffffff;
+    padding:50px 30px 30px 30px; 
+
+}
+.subcontainer{
+    background:transparent;
+    padding:20px;
+    color:black;
+    border:1px solid rgba(0, 0, 0, 0.412);
+    border-radius:2px;
+    width:250px;
+}
+
