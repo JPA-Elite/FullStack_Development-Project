@@ -22,7 +22,7 @@ class BookFactory extends Factory
             'payment' => $this->faker->randomDigit,
             'time_travel' => $this->faker->numberBetween($min = 30, $max = 180),
             'customer_account_id'  => CustomerAccount::first(),
-            'place_id'  => Place::first()
+            'place_id'  => $this->faker->randomDigit,
         ];
     }
 }

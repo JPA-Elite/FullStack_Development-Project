@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Str;
-use App\Models\OwnerAccount;
+use App\Models\TechnicianAccount;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -15,7 +15,7 @@ class OwnerAccountController extends Controller
      */
     public function index()
     {
-        return OwnerAccount::all();
+        return TechnicianAccount::all();
     }
 
     /**
@@ -36,16 +36,29 @@ class OwnerAccountController extends Controller
      */
     public function store(Request $request)
     {
+
         $validated = $request->validate([
             'name' => 'required',
-            'email' => 'required|email|unique:customer_accounts,email',
+            'gender' => 'required',
+            'birthdate' => 'required',
+            'age' => 'required',  
             'address' => 'required',
+            'phone' => 'required',
+            'email' => 'required|email|unique:technician_accounts,email',
+            'valid_id' => 'required',
+            'category' => 'required',
             'password' => 'required'
         ]);
-        return OwnerAccount::create([
+        return TechnicianAccount::create([
             'name'=> $validated['name'],
-            'email'=> $validated['email'],
+            'gender' => $validated['gender'],
+            'birthdate' => $validated['birthdate'],
+            'age' => $validated['age'], 
             'address'=> $validated['address'],
+            'phone'=> $validated['phone'],
+            'email'=> $validated['email'],
+            'valid_id'=> $validated['valid_id'],
+            'category'=> $validated['category'],
             'password'=>Hash::make($validated['password']),
             'email_verified_at' => now(),
             // 'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
@@ -56,21 +69,21 @@ class OwnerAccountController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\OwnerAccount  $ownerAccount
+     * @param  \App\Models\TechnicianAccount  $ownerAccount
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        return OwnerAccount::find($id);
+        return TechnicianAccount::find($id);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\OwnerAccount  $ownerAccount
+     * @param  \App\Models\TechnicianAccount  $ownerAccount
      * @return \Illuminate\Http\Response
      */
-    public function edit(OwnerAccount $ownerAccount)
+    public function edit(TechnicianAccount $ownerAccount)
     {
         //
     }
@@ -89,7 +102,7 @@ class OwnerAccountController extends Controller
         //     'email' => 'email|unique:customer_accounts,email',
 
         // ]);
-        return OwnerAccount::find($id)->update([
+        return TechnicianAccount::find($id)->update([
             'name'=> $request->name,
             'email'=> $request->email,
             'address'=> $request->address,
@@ -101,11 +114,11 @@ class OwnerAccountController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\OwnerAccount  $ownerAccount
+     * @param  \App\Models\TechnicianAccount  $ownerAccount
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        return OwnerAccount::find($id)->delete();
+        return TechnicianAccount::find($id)->delete();
     }
 }

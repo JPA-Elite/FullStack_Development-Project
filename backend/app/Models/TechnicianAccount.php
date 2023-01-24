@@ -8,17 +8,24 @@ use Illuminate\Notifications\Notifiable;
 use App\Models\Place;
 use Illuminate\Database\Eloquent\Model;
 
-class OwnerAccount extends Model
+class TechnicianAccount extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
+    
     protected $fillable = [
         'name',
+        'gender',
+        'birthdate',
+        'age',
+        'address',
+        'phone',
         'email',
-        'password',
-        'address'
+        'valid_id',
+        'category',
+        'password'
+       
     ];
     protected $hidden = [
-        'password',
         'remember_token',
     ];
 

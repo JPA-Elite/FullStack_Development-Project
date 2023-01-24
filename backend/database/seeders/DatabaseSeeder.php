@@ -4,10 +4,10 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\OwnerAccount;
+use App\Models\TechnicianAccount;
 use App\Models\CustomerAccount;
 use App\Models\Book;
-use App\Models\Place;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -24,9 +24,8 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        OwnerAccount::factory(10)->create();
+        TechnicianAccount::factory(10)->create();
         CustomerAccount::factory(10)->create();
-        Place::factory(10)->create();
         Book::factory(10)->create();
 
 
