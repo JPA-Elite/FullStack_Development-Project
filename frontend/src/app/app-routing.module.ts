@@ -16,7 +16,7 @@ const routes: Routes = [
     path : 'transactions', component: ArticlesComponent
   },
   {
-    path : 'home', component: HomeComponent
+    path : '', component: HomeComponent
   }
 ];
 
