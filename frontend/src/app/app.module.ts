@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { ApplyComponent } from './apply/apply.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { RegisterComponent } from './register/register.component';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    ApplyComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { NewArticleComponent } from './new-article/new-article.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { ApplyComponent } from './apply/apply.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,9 @@ const routes: Routes = [
   },
   {
     path : 'edit/:customerId',component : EditArticleComponent
+  },
+  {
+    path : 'apply', component: ApplyComponent
   },
   {
     path : 'transactions', component: ArticlesComponent

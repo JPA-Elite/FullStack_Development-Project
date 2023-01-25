@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { ArticleService } from '../services/article.service';
 
 @Component({
-  selector: 'app-articles',
-  templateUrl: './articles.component.html',
-  styleUrls: ['./articles.component.css'],
+  selector: 'app-apply',
+  templateUrl: './apply.component.html',
+  styleUrls: ['./apply.component.css']
 })
-export class ArticlesComponent implements OnInit {
+export class ApplyComponent implements OnInit {
   constructor(private articlesService: ArticleService, private router: Router) { }
   customers: any;
   showCustomers() {
@@ -21,7 +21,7 @@ export class ArticlesComponent implements OnInit {
 
   deleteCustomer(id: any) {
     this.articlesService.deleteCustomer(id).subscribe(
-      (res: any) => {
+      (      res: any) => {
         this.customers = this.customers.filter((a: any) => a.id != id);
       });
 
