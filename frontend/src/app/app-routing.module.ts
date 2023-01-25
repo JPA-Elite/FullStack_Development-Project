@@ -4,10 +4,14 @@ import { EditArticleComponent } from './edit-article/edit-article.component';
 import { NewArticleComponent } from './new-article/new-article.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {
     path : 'add',component : NewArticleComponent
+  },
+  {
+    path : 'register',component : RegisterComponent
   },
   {
     path : 'edit/:customerId',component : EditArticleComponent
